@@ -110,7 +110,7 @@
         <p style="font-size:20px;margin:25px;text-align:center">Best opening event moments</p>
         <div class="owl-carousel owl-theme">
            <div class="item">
-               <a class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639142158366/1-nespresso-boutique-velazquez-maxim-huerta-ramon-freixa.jpg" title="Tuvimos el honor de compartir la velada con invitados como Màxim Huerta y Ramón Freixa" >
+               <a class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639142158366/1-nespresso-boutique-velazquez-maxim-huerta-ramon-freixa.jpg" data-caption="Tuvimos el honor de compartir la velada con invitados como Màxim Huerta y Ramón Freixa" title="Tuvimos el honor de compartir la velada con invitados como Màxim Huerta y Ramón Freixa" >
                 <img class="img-responsive img-thumbnail center-block" src="/ecom/medias/sys_master/public/10625148092446/1-nespresso-boutique-velazquez-maxim-huerta-ramon-freixa-thumb.jpg" title="Tuvimos el honor de compartir la velada con invitados como Màxim Huerta y Ramón Freixa" />
                    <div class="onhover">
                     <div></div>
@@ -119,7 +119,7 @@
                </a>
            </div>
            <div class="item">
-               <a class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639143272478/2-nespresso-boutique-velazquez-ainhoa-arbizu.jpg" title="Thomas Reuter presenta el nuevo concepto de Boutique a los invitados, junto a Ainhoa Arbizu">
+               <a data-caption="Thomas Reuter presenta el nuevo concepto de Boutique a los invitados, junto a Ainhoa Arbizu" class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639143272478/2-nespresso-boutique-velazquez-ainhoa-arbizu.jpg" title="Thomas Reuter presenta el nuevo concepto de Boutique a los invitados, junto a Ainhoa Arbizu">
                 <img class="img-responsive img-thumbnail center-block" src="/ecom/medias/sys_master/public/10625151467550/2-nespresso-boutique-velazquez-ainhoa-arbizu-thumb.jpg" title="Thomas Reuter presenta el nuevo concepto de Boutique a los invitados, junto a Ainhoa Arbizu" />
                    <div class="onhover">
                     <div></div>
@@ -128,7 +128,7 @@
                </a>
            </div>
            <div class="item">
-               <a class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639143796766/3-nespresso-boutique-velazquez-ramon-freixa.jpg" title="Ramón Freixa se inspiró en el nuevo concepto de Boutique y en la ciudad de Madrid para la preparación de su menú">
+               <a data-caption="Ramón Freixa se inspiró en el nuevo concepto de Boutique y en la ciudad de Madrid para la preparación de su menú" class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639143796766/3-nespresso-boutique-velazquez-ramon-freixa.jpg" title="Ramón Freixa se inspiró en el nuevo concepto de Boutique y en la ciudad de Madrid para la preparación de su menú">
                 <img class="img-responsive img-thumbnail center-block" src="/ecom/medias/sys_master/public/10625149009950/3-nespresso-boutique-velazquez-ramon-freixa-thumb.jpg" title="Ramón Freixa se inspiró en el nuevo concepto de Boutique y en la ciudad de Madrid para la preparación de su menú" />
                    <div class="onhover">
                     <div></div>
@@ -137,7 +137,7 @@
                </a>
            </div>
            <div class="item">
-               <a class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639144288286/4-nespresso-boutique-velazquez-brianda-fitz-james-stuart.jpg" title="Brianda Fitz-James Stuart amenizó la noche con su fantástica música">
+               <a data-caption="Brianda Fitz-James Stuart livened up the evening with her fantastic music" class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639144288286/4-nespresso-boutique-velazquez-brianda-fitz-james-stuart.jpg" title="Brianda Fitz-James Stuart amenizó la noche con su fantástica música">
                 <img class="img-responsive img-thumbnail center-block" src="/ecom/medias/sys_master/public/10625149075486/4-nespresso-boutique-velazquez-brianda-fitz-james-stuart-thumb.jpg" title="Brianda Fitz-James Stuart amenizó la noche con su fantástica música" />
                    <div class="onhover">
                     <div></div>
@@ -146,7 +146,7 @@
                </a>
            </div>
            <div class="item">
-               <a class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639144550430/5-nespresso-boutique-velazquez-luis-inchaurraga.jpg" title="Pudimos disfrutar de deliciosos cócteles elaborados con café de la mano de Luis Inchaurraga">
+               <a data-caption="We were able to enjoy delicious coffee-based cocktails made by Luis Inchaurraga" class="fancybox" rel="fancybox" href="/ecom/medias/sys_master/public/10639144550430/5-nespresso-boutique-velazquez-luis-inchaurraga.jpg" title="Pudimos disfrutar de deliciosos cócteles elaborados con café de la mano de Luis Inchaurraga">
                 <img class="img-responsive img-thumbnail center-block" src="/ecom/medias/sys_master/public/10625149730846/5-nespresso-boutique-velazquez-luis-inchaurraga-thumb.jpg" title="Pudimos disfrutar de deliciosos cócteles elaborados con café de la mano de Luis Inchaurraga" />
                    <div class="onhover">
                     <div></div>
@@ -262,12 +262,21 @@
         nextEffect : 'none',
         padding     : 0,
         margin      : [40, 100, 40, 100] // Increase left/right margin
-        titlePosition  : 'inside',
+        beforeLoad: function() {
+        this.title = $(this.element).attr('title');
+       }
         arrows: false,
       });
     });
 </script>
 <style>
+.fancybox-title-float-wrap .child 
+{
+  color: #000;
+  border-radius: 0px;
+  background: #fff;
+  text-shadow: none;
+}
 .fancybox-type-iframe .fancybox-nav {
     width: 60px;       
 }

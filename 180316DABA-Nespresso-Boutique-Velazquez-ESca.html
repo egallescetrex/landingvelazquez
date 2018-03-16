@@ -252,12 +252,21 @@
     nextEffect : 'none',
     padding     : 0,
     margin      : [40, 100, 40, 100] // Increase left/right margin
-    titlePosition  : 'inside',
+    beforeLoad: function() {
+      this.title = $(this.element).attr('title');
+     }
     arrows: false,
   });
     });
 </script>
 <style>
+.fancybox-title-float-wrap .child 
+{
+  color: #000;
+  border-radius: 0px;
+  background: #fff;
+  text-shadow: none;
+}
 .fancybox-type-iframe .fancybox-nav {
     width: 60px;       
 }
