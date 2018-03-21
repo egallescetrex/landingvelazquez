@@ -98,12 +98,17 @@
             <div class="img_styled">
                 <a class="various fancyframe fancybox.iframe" data-fancybox-type="iframe" href="https://www.youtube.com/embed/KocL2Cu7t_o"><img src="/ecom/medias/sys_master/public/10523072921630/boutique-thumbnail.jpg"></a>
             </div>
-                
-            <p class="p_style black_style pad20_style">La primera Boutique donde podrá sumergirse</p>
-            <p class="p_style black_style">en una experiencia envolvente para conocer y explorar en profundidad</p>
-            <p class="p_style black_style">el mundo del café y dónde se reflejan los compromisos de <strong>Nespresso</strong></p>
-            <p class="p_style black_style">con la sostenibilidad y el medio ambiente.</p>
-            <p class="p_style black_style pad40_style margin10_style">Visítenos en Velázquez, 39 y viva <strong>Nespresso</strong> de otra forma.</p>
+            <div class="bigspace">
+              <p class="p_style black_style pad20_style">La primera Boutique donde podrá sumergirse</p>
+              <p class="p_style black_style">en una experiencia envolvente para conocer y explorar en profundidad</p>
+              <p class="p_style black_style">el mundo del café y dónde se reflejan los compromisos de <strong>Nespresso</strong></p>
+              <p class="p_style black_style">con la sostenibilidad y el medio ambiente.</p>
+              <p class="p_style black_style pad40_style margin10_style">Visítenos en Velázquez, 39 y viva <strong>Nespresso</strong> de otra forma.</p>
+            </div>
+            <div class="minispace">
+              <p class="p_style">La primera Boutique donde podrá sumergirse en una experiencia envolvente para conocer y explorar en profundidad el mundo del café y dónde se reflejan los compromisos de <strong>Nespresso</strong> con la sostenibilidad y el medio ambiente.</p>
+              <p class="p_style black_style pad40_style margin10_style">Visítenos en Velázquez, 39 y viva <strong>Nespresso</strong> de otra forma.</p>
+            </div>
             <p class="p_style black_style">
                 <a class="localizador_style black_style" href="https://www.nespresso.com/es/es/localizador-de-tiendas">Encontrar la Boutique</a>
             </p>
@@ -214,66 +219,28 @@
 
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-    loop:false,
-    margin:5,
-    nav:true,
-    autoplay: true,
-    animateIn: true,
-    animateOut: true,
-    autoWidth: true,
-    responsiveClass: true,
-    autoplayHoverPause: true,
-    responsiveRefreshRate : 10,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    },
-    //nav: true,
-    smartSpeed : 900,
-    autoplaySpeed: 100,
-    navSpeed: 100,
-    dots: true,
-    navText : ["<i class='fa fa-2x fa-chevron-left'></i>","<i class='fa fa-2x fa-chevron-right'></i>"],
-    })
-
-    $(".fancyframe").fancybox({
-        type: "iframe",
-        overlayOpacity  : 0.9,  // or the opacity you want 
-        overlayColor    : "#000000", // or your preferred hex color value
-        centerOnScroll: true,
-        padding     : 0,
-        showCloseButton: false,
-        // other API options
-    })
-    $("a[rel=fancybox]").fancybox({
-        overlayOpacity  : 0.9,  // or the opacity you want 
-        overlayColor    : "#000000", // or your preferred hex color value
-        openEffect  : 'none',
-        closeEffect : 'none',
-        prevEffect : 'none',
-        nextEffect : 'none',
-        padding     : 0,
-        margin      : [40, 100, 40, 100], // Increase left/right margin
-         helpers : {
-            title : {
-              type : 'inside'
-            }
-        }
-      });
-    });
-</script>
 <style>
+.bigspace {
+  display: block;
+}
+.minispace {
+  display: none;
+}
+@media (max-width: 600px) {
+    .bigspace {
+      display: none;
+    }
+    .minispace {
+      display: block;
+      padding-left: 70px;
+      text-align: center;
+      padding-right: 70px;
+    }
+}
+.fancybox-close {
+    top: 0 !important;
+    right: 0 !important;
+}
 .fancybox-wrap {
   overflow: visible !important;
 }
@@ -403,4 +370,64 @@
       padding: 10px;
     }
 </style>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:5,
+    nav:true,
+    autoplay: true,
+    animateIn: true,
+    animateOut: true,
+    autoWidth: true,
+    responsiveClass: true,
+    autoplayHoverPause: true,
+    responsiveRefreshRate : 10,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    },
+    //nav: true,
+    smartSpeed : 900,
+    autoplaySpeed: 100,
+    navSpeed: 100,
+    dots: true,
+    navText : ["<i class='fa fa-2x fa-chevron-left'></i>","<i class='fa fa-2x fa-chevron-right'></i>"],
+    })
+
+    $(".fancyframe").fancybox({
+        type: "iframe",
+        overlayOpacity  : 0.9,  // or the opacity you want 
+        overlayColor    : "#000000", // or your preferred hex color value
+        centerOnScroll: true,
+        padding     : 0,
+        showCloseButton: false,
+        // other API options
+    })
+    $("a[rel=fancybox]").fancybox({
+        overlayOpacity  : 0.9,  // or the opacity you want 
+        overlayColor    : "#000000", // or your preferred hex color value
+        openEffect  : 'none',
+        closeEffect : 'none',
+        prevEffect : 'none',
+        nextEffect : 'none',
+        padding     : 0,
+        margin      : [40, 100, 40, 100], // Increase left/right margin
+         helpers : {
+            title : {
+              type : 'inside'
+            }
+        }
+      });
+    });
+</script>
 </main>

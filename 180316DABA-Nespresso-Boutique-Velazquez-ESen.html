@@ -98,11 +98,18 @@
             <div class="img_styled">
                 <a class="various fancyframe fancybox.iframe" data-fancybox-type="iframe" href="https://www.youtube.com/embed/KocL2Cu7t_o"><img src="/ecom/medias/sys_master/public/10523072921630/boutique-thumbnail.jpg"></a>
             </div>
-                
-            <p class="p_style black_style pad20_style">The first Boutique in which you can have an immersive experience</p>
+            
+            <div class="bigspace">
+              <p class="p_style black_style pad20_style">The first Boutique in which you can have an immersive experience</p>
             <p class="p_style black_style">to learn about and explore the world of coffee in depth, and that also</p>
             <p class="p_style black_style">reflects the <strong>Nespresso</strong> commitment to sustainability and the environment</p>
             <p class="p_style black_style pad20_style margin10_style">Visit us at Velázquez, 39 and experience <strong>Nespresso</strong> in a whole new way.</p>
+            </div>
+            <div class="minispace">
+              <p class="p_style">The first Boutique in which you can have an immersive experience to learn about and explore the world of coffee in depth, and that also reflects the <strong>Nespresso</strong> commitment to sustainability and the environment</p>
+            <p class="p_style black_style pad20_style margin10_style">Visit us at Velázquez, 39 and experience <strong>Nespresso</strong> in a whole new way.</p>
+            </div>
+
             <p class="p_style black_style"><a class="localizador_style black_style" href="https://www.nespresso.com/es/en/localizador-de-tiendas">Find the Boutique</a></p>
         </div>
     </div>
@@ -271,6 +278,27 @@
     });
 </script>
 <style>
+.bigspace {
+  display: block;
+}
+.minispace {
+  display: none;
+}
+@media (max-width: 600px) {
+    .bigspace {
+      display: none;
+    }
+    .minispace {
+      display: block;
+      padding-left: 70px;
+      text-align: center;
+      padding-right: 70px;
+    }
+}
+.fancybox-close {
+    top: 0 !important;
+    right: 0 !important;
+}
 .fancybox-wrap {
   overflow: visible !important;
 }
